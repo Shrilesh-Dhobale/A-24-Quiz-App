@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 function App() {
   const [questionIndex,SetQuestionIndex] = useState(0);
+  const currentQuestion = questions[questionIndex];
   return (
    <div>
     <h1>Quiz Application</h1>
