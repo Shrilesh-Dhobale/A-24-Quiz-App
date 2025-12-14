@@ -6,7 +6,8 @@ function App() {
   const [questionIndex,SetQuestionIndex] = useState(0);
   return (
    <div>
-
+    <h1>Quiz Application</h1>
+    
    </div>
   )
 };
