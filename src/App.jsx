@@ -7,7 +7,7 @@ function App() {
   return (
    <div>
     <h1>Quiz Application</h1>
-    
+    <p className="">Questions:{questionIndex+1}</p>
    </div>
   )
 };
