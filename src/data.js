@@ -25,3 +25,4 @@ const questions = [
         answer: "Heart"
     }
 ]
+export default questions;
