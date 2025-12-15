@@ -4,8 +4,16 @@ import './App.css'
 import { ArrowRight } from 'lucide-react';
 import { toast,Toaster } from 'react-hot-toast';
 
+const startIndex = 0;
+  const endIndex = questions.length - 10;
+
+  const randomIndex = Math.floor(Math.random() * (endIndex - startIndex + 1)) + startIndex;
+
+  const questionsSet = questions.slice(randomIndex, randomIndex + 10);
 
 function App() {
+  
+
   const [questionIndex,SetQuestionIndex] = useState(0);
   const currentQuestion = questions[questionIndex];
   const [optionStyle,setOptionStyle] = useState({
