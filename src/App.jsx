@@ -2,7 +2,7 @@ import { useState } from 'react'
 import questions from './data'
 import './App.css'
 import { ArrowRight } from 'lucide-react';
-import { Toaster } from 'react-hot-toast';
+import { toast,Toaster } from 'react-hot-toast';
 
 
 function App() {
@@ -10,9 +10,9 @@ function App() {
   const currentQuestion = questions[questionIndex];
   const checkAnswer = (selectedOption) => {
     if(selectedOption === currentQuestion.answer){
-      alert("Correct Answer!");
+      toast.success("Correct Answer!");
     } else {
-      alert(`Wrong Answer! The correct answer is: ${currentQuestion.answer}`);
+    toast.error(`Wrong Answer! The correct answer is: ${currentQuestion.answer}`);
     }
   };
 
