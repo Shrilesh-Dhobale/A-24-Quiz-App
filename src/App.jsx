@@ -8,7 +8,7 @@ function App() {
   const currentQuestion = questions[questionIndex];
   return (
    <div>
-    <h1>Quiz Application</h1>
+    <h1 className='app-head'>Quiz Application</h1>
     <p className="">Questions:{questionIndex+1}</p>
     <ArrowRight 
     className="next-question"
