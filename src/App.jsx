@@ -7,7 +7,13 @@ import { ArrowRight } from 'lucide-react';
 function App() {
   const [questionIndex,SetQuestionIndex] = useState(0);
   const currentQuestion = questions[questionIndex];
-  const checkAnswer = (selectedOption) => {};
+  const checkAnswer = (selectedOption) => {
+    if(selectedOption === currentQuestion.answer){
+      alert("Correct Answer!");
+    } else {
+      alert(`Wrong Answer! The correct answer is: ${currentQuestion.answer}`);
+    }
+  };
 
   return (
    <div>
