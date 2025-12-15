@@ -10,6 +10,10 @@ html, body, #root {
 .question-no{
   font-size: 24px;
 }
+.question-text{
+  font-size: 20px;
+  margin: 20px;
+}
 .next-question{
   bottom:20px;
   right:20px;
