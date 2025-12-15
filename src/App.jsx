@@ -10,7 +10,7 @@ function App() {
   return (
    <div>
     <h1 className='app-head'>Quiz Application</h1>
-    <p className="">Questions:{questionIndex+1}</p>
+    <p className="question-no">Questions:{questionIndex+1}</p>
     <p className="question-text">{currentQuestion.question}</p>
     {currentQuestion.option.map((option,idx)=>(
       <div key={idx}>{option}</div>

@@ -4,9 +4,11 @@ html, body, #root {
 }
 .app-head{
   text-align: center;
-  ;
+  font-size: 36px;
+  margin-top: 20px;
+}
+.question-no{
   font-size: 24px;
-  
 }
 .next-question{
   bottom:20px;
