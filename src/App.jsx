@@ -10,6 +10,7 @@ function App() {
    <div>
     <h1 className='app-head'>Quiz Application</h1>
     <p className="">Questions:{questionIndex+1}</p>
+    <p className="question-text">{currentQuestion.question}</p>
     <ArrowRight 
     className="next-question"
     onClick={()=>{
