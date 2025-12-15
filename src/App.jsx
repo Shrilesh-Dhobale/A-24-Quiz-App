@@ -2,6 +2,7 @@ import { useState } from 'react'
 import questions from './data'
 import './App.css'
 import { ArrowRight } from 'lucide-react';
+import { Toaster } from 'react-hot-toast';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
       }
     }}
     />
+    <Toaster />
    </div>
   )
 };
