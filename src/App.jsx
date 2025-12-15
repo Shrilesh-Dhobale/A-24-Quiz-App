@@ -13,7 +13,7 @@ function App() {
     <p className="question-no">Questions:{questionIndex+1}</p>
     <p className="question-text">{currentQuestion.question}</p>
     {currentQuestion.option.map((option,idx)=>(
-      <div key={idx}>{option}</div>
+      <div key={idx} className='option-card'>{option}</div>
     ))}
     
     <ArrowRight 
