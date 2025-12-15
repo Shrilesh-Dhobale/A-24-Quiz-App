@@ -8,11 +8,20 @@ import { toast,Toaster } from 'react-hot-toast';
 function App() {
   const [questionIndex,SetQuestionIndex] = useState(0);
   const currentQuestion = questions[questionIndex];
-  const checkAnswer = (selectedOption) => {
+  const [optionStyle,setOptionStyle] = useState({
+    0: {},
+    1: {},
+    2: {},
+    3: {}
+  });
+  const checkAnswer = (selectedOption,idx) => {
     if(selectedOption === currentQuestion.answer){
       toast.success("Correct Answer!");
+      setOptionStyle({...optionStyle, [idx]: { backgroundColor: 'green' }});
+
     } else {
     toast.error(`Wrong Answer! The correct answer is: ${currentQuestion.answer}`);
+    setOptionStyle({...optionStyle, [idx]: { backgroundColor: 'red' }});
     }
   };
 
@@ -24,8 +33,10 @@ function App() {
     {currentQuestion.option.map((option,idx)=>(
       <div key={idx} className='option-card' 
       onClick={()=>
-        checkAnswer(option)
-      }>{option}</div>
+        checkAnswer(option, idx)
+      }
+      style={optionStyle[idx]}
+      >{option}</div>
     ))}
     
     <ArrowRight 
@@ -34,6 +45,12 @@ function App() {
       if(questionIndex < questions.length - 1){
         SetQuestionIndex(questionIndex + 1);
       }
+      setOptionStyle({
+        0: {},
+        1: {},
+        2: {},
+        3: {}
+      });
     }}
     />
     <Toaster />
